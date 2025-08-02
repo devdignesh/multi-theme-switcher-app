@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
 const About: React.FC = () => {
+  // Get the active theme from context
   const { theme } = useContext(ThemeContext);
 
   return (

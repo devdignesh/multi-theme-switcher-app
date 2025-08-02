@@ -37,6 +37,12 @@ npm run dev
 - `themes/` – Themes (theme1, theme2, theme3)
 - `types/` - Types
 
+## Environment Variables
+Create a `.env` file in the root directory and add your API URL:
+```bash
+VITE_API_URL=""
+```
+
 ## Notes
 - Easily add more themes via `themes.ts`
 - Built with scalability and clean UI in mind

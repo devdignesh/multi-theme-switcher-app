@@ -9,11 +9,15 @@ import type { Product } from "../types/products";
 import FeaturedProduct from "../components/FeaturedProduct";
 
 const Home: React.FC = () => {
+  // Get the active theme from context
   const { theme } = useContext(ThemeContext);
+
+  // Local state to store products
   const [products, setProducts] = useState<Product[]>([]);
   const [, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Fetch products from the API when the component mounts
   useEffect(() => {
     const loadProducts = async () => {
       setLoading(true);
@@ -34,6 +38,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Header />
+
       <div
         className={`${theme.background} ${theme.fontFamily} ${theme.transition} `}
       >
@@ -41,6 +46,7 @@ const Home: React.FC = () => {
           <div className={`flex flex-col md:flex-row gap-6 `}>
             {theme.layout === "sidebar" && (
               <>
+                {/* Sidebar for desktop */}
                 <aside className="w-44 shrink-0 p-4 h-screen md:block hidden">
                   <Title text="Collection" />
                   <ul>
@@ -59,6 +65,7 @@ const Home: React.FC = () => {
                   </ul>
                 </aside>
 
+                {/* Dropdown select for mobile view */}
                 <select
                   aria-label="Collection"
                   className={`border border-gray-400 p-2 rounded-sm md:hidden focus:outline-none ${theme.background} cursor-pointer px-3`}
@@ -71,6 +78,7 @@ const Home: React.FC = () => {
               </>
             )}
 
+            {/* Main content area */}
             <div className="min-w-0 flex-1 overflow-hidden">
               <main className="space-y-8 w-full">
                 {products.length > 0 && (
