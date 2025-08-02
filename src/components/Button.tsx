@@ -12,7 +12,7 @@ const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
 
   return (
     <button
-      className={`${theme.cardBg} px-4 py-2 rounded-md transition-colors duration-200`}
+      className={`${theme.button} px-4 py-2 rounded-md transition-colors duration-200 cursor-pointer`}
       onClick={onClick}
     >
       {text}

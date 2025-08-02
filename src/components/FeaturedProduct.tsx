@@ -11,7 +11,7 @@ const FeaturedProduct: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <div
-      className={`${theme.cardBg} rounded-lg aspect-[21/9] flex  justify-between items-center sm:p-4 p-6`}
+      className={`${theme.card} rounded-lg aspect-[21/9] flex  justify-between items-center sm:p-4 p-6`}
     >
       <div className="sm:px-4 sm:w-1/2 flex flex-col justify-center space-y-2">
         <span className="text-2xl sm:text-3xl font-bold">
@@ -21,7 +21,7 @@ const FeaturedProduct: React.FC<ProductCardProps> = ({ product }) => {
           Explore our carefully selected products for your home and lifestyle.
         </p>
         <div className="flex flex-row mt-2">
-          <button className="px-4 sm:px-6 py-2 bg-black rounded-full text-[#eee] font-medium cursor-pointer">
+          <button className={`${theme.button} px-4 sm:px-6 py-2 rounded-full font-medium cursor-pointer`}>
             Shop now
           </button>
         </div>

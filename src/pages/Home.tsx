@@ -78,7 +78,13 @@ const Home: React.FC = () => {
                 )}
 
                 <div className="w-full">
-                  <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                  <div
+                    className={`w-full ${
+                      theme.name === "Colorful"
+                        ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                        : "columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6"
+                    }`}
+                  >
                     {products.map((product, i) =>
                       i !== 0 ? (
                         <ProductCard key={product.id} product={product} />

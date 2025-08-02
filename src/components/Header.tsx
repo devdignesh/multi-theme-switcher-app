@@ -15,9 +15,9 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`sticky top-0 left-0 w-full border-b border-b-gray-200 z-10 backdrop-blur-md ${theme.background} ${theme.fontFamily}`}
+      className={`sticky top-0 left-0 w-full border-b border-b-gray-200 z-10 backdrop-blur-md ${theme.background} ${theme.fontFamily} ${theme.transition}`}
     >
-      <div className={`max-w-7xl mx-auto py-4 px-4 ${theme.transition}`}>
+      <div className={`max-w-7xl mx-auto py-4 px-4 `}>
         <div className="flex justify-between items-center">
           {/* logo */}
           <Link to="/" className="text-xl font-bold">
@@ -43,9 +43,9 @@ const Header: React.FC = () => {
               onChange={handleThemeChange}
               className={`border border-gray-400 p-2 rounded-sm focus:outline-none ${theme.background} cursor-pointer px-3`}
             >
-              <option value="theme1">Minimalist</option>
-              <option value="theme2">Dark</option>
-              <option value="theme3">Colorful</option>
+              <option value="theme1">Theme 1</option>
+              <option value="theme2">Theme 2</option>
+              <option value="theme3">Theme 3</option>
             </select>
           </nav>
 
