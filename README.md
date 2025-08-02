@@ -48,3 +48,7 @@ VITE_API_URL=""
 - Built with scalability and clean UI in mind
 - Fully customizable with Tailwind utility classes
 
+## Contact
+- Dignesh Hirpara (React.js Developer)
+- dignesh.hirapara@gmail.com
+
