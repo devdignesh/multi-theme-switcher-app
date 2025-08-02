@@ -1,6 +1,5 @@
-import { createContext } from 'react';
-import { themes, type ThemeName, type ThemeStyles } from '../types/theme';
-
+import { createContext } from "react";
+import { themes, type ThemeName, type ThemeStyles } from "../themes";
 
 interface ThemeContextType {
   theme: ThemeStyles;
@@ -8,9 +7,6 @@ interface ThemeContextType {
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: themes.theme1,
+  theme: themes.theme2,
   setTheme: () => {},
 });
-
-
-
